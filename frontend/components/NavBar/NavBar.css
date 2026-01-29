@@ -1,0 +1,74 @@
+/* =========================
+   BASE (desktop ya funciona)
+========================= */
+
+/* Header transición más suave */
+header {
+  will-change: transform, opacity;
+}
+
+/* =========================
+   MOBILE (≤ 768px)
+========================= */
+@media (max-width: 768px) {
+
+  /* Header */
+  header {
+    backdrop-filter: blur(16px);
+  }
+
+  /* Nav container */
+  nav {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  /* Logo */
+  nav img {
+    height: 2.2rem !important;
+  }
+
+  /* Ocultamos el menú desktop (por si acaso) */
+  nav ul {
+    display: none;
+  }
+}
+
+/* =========================
+   TABLET (769px – 1024px)
+========================= */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  nav {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  nav ul {
+    gap: 2rem;
+  }
+
+  nav img {
+    height: 2.6rem !important;
+  }
+}
+
+/* =========================
+   DESKTOP GRANDE (≥ 1536px)
+========================= */
+@media (min-width: 1536px) {
+
+  nav {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  nav ul {
+    gap: 3rem;
+    font-size: 1.05rem;
+  }
+
+  nav img {
+    height: 3.2rem !important;
+  }
+}

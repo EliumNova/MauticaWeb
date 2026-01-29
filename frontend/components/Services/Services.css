@@ -1,0 +1,107 @@
+.services__title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #12a3fc, #0077c7);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+@media (max-width: 640px) {
+
+  /* SECTION */
+  #services {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  /* TÍTULO */
+  .services__title {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+
+  /* CONTENEDOR SLIDER */
+  #services > div.relative {
+    height: 26rem;
+  }
+
+  /* SLIDE LAYOUT */
+  #services .absolute > div {
+    flex-direction: column !important;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    gap: 1rem;
+  }
+
+  /* HORIZONTAL */
+  #services .absolute > div > div:first-child {
+    width: 100% !important;
+    height: 60%;
+  }
+
+  /* STACK VERTICAL */
+  #services .absolute > div > div:last-child {
+    width: 100% !important;
+    height: 40%;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  #services .absolute > div > div:last-child > div {
+    flex: 1;
+  }
+
+  /* BOTONES */
+  #services button {
+    font-size: 3rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+
+  /* TÍTULO */
+  .services__title {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+  }
+
+  /* SLIDER */
+  #services > div.relative {
+    height: 30rem;
+  }
+
+  /* CONTENIDO */
+  #services .absolute > div {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    gap: 1.5rem;
+  }
+
+  /* PROPORCIONES */
+  #services .absolute > div > div:first-child {
+    width: 60%;
+  }
+
+  #services .absolute > div > div:last-child {
+    width: 40%;
+  }
+
+  /* BOTONES */
+  #services button {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1536px) {
+
+  #services > div.relative {
+    height: 38rem;
+  }
+
+  .services__title {
+    font-size: 2.8rem;
+  }
+}

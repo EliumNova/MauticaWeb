@@ -1,0 +1,174 @@
+.form__input {
+  @apply flex flex-col;
+}
+
+.box__input {
+  background: none;
+  border-bottom: 1px solid #000;
+  border-radius: 0px;
+  outline: none;
+}
+
+.box__input:focus {
+  border-bottom-color: #22A0F1;
+}
+
+.message__input {
+  background: none;
+  border: none;
+  border: 1px solid #000;
+  outline: none;
+  color: #fff;
+  resize: none;
+}
+
+.message__input:focus {
+  border-color: #22A0F1;
+}
+
+.area-width {
+  width: 10%;
+}
+
+.right__title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #22A0F1, #8dd3ff);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.btn__form {
+  padding: 0.7rem;
+  background: linear-gradient(#000, #000) padding-box,
+    linear-gradient(to bottom, #22A0F1, #8dd3ff) border-box;
+  border-radius: 1rem;
+  border: 2px solid transparent;
+  color: transparent;
+  font-size: 1rem;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+  margin: 2.5rem 0;
+  transition: all 0.3s ease;
+}
+
+.btn__form::after {
+  content: "Reservar";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #22A0F1, #8dd3ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn__form:hover {
+  cursor: pointer;
+  background: none;
+  background-color: #22A0F1;
+  border-color: #8dd3ff;
+}
+
+.btn__form:hover::after {
+  background: none;
+  color: #000;
+  -webkit-text-fill-color: #000;
+  text-fill-color: #000;
+}
+
+@media (max-width: 640px) {
+
+  /* SECTION */
+  #contact {
+    padding-top: 2rem;   /* reduce py */
+    padding-bottom: 2rem;
+  }
+
+  .contactMapReverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .mapaGoogle {
+    margin-top: -5rem;
+  }
+
+  /* TÍTULO */
+  .right__title {
+    font-size: 2rem; /* antes 2.5rem */
+  }
+
+  /* TEXTO DESCRIPTIVO */
+  #contact p {
+    width: 75% !important;
+    font-size: 0.95rem;
+    line-height: 1.5rem;
+  }
+
+  /* CTA CONTENEDOR */
+  #contact article {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  /* CTA TÍTULO */
+  #contact h3 {
+    font-size: 1.5rem;
+  }
+
+  /* CTA TEXTO */
+  #contact article p {
+    font-size: 1rem;
+  }
+
+  /* BOTÓN */
+  .btn__form {
+    font-size: 1rem;
+    padding: 0.75rem;
+    margin: 1.5rem 0;
+    width: 65%;
+  }
+
+  /* MAPA */
+  #contact aside div {
+    height: 20rem; /* antes 32rem */
+    width: 20rem;
+    border-radius: 1rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+
+  #contact p {
+    width: 80%;
+  }
+
+    .contactMapReverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .mapaGoogle {
+    margin-top: -5rem;
+  }
+
+  .right__title {
+    font-size: 2.2rem;
+  }
+
+  #contact aside div {
+    height: 26rem;
+  }
+}
