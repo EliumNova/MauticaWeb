@@ -10,7 +10,7 @@
 }
 
 .box__input:focus {
-  border-bottom-color: #22A0F1;
+  border-bottom-color: #22a0f1;
 }
 
 .message__input {
@@ -23,7 +23,7 @@
 }
 
 .message__input:focus {
-  border-color: #22A0F1;
+  border-color: #22a0f1;
 }
 
 .area-width {
@@ -33,15 +33,16 @@
 .right__title {
   font-size: 2.5rem;
   font-weight: bold;
-  background: linear-gradient(to right, #22A0F1, #8dd3ff);
+  background: linear-gradient(to right, #22a0f1, #8dd3ff);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
 
 .btn__form {
   padding: 0.7rem;
-  background: linear-gradient(#000, #000) padding-box,
-    linear-gradient(to bottom, #22A0F1, #8dd3ff) border-box;
+  background:
+    linear-gradient(#000, #000) padding-box,
+    linear-gradient(to bottom, #22a0f1, #8dd3ff) border-box;
   border-radius: 1rem;
   border: 2px solid transparent;
   color: transparent;
@@ -65,7 +66,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to bottom, #22A0F1, #8dd3ff);
+  background: linear-gradient(to bottom, #22a0f1, #8dd3ff);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -77,7 +78,7 @@
 .btn__form:hover {
   cursor: pointer;
   background: none;
-  background-color: #22A0F1;
+  background-color: #22a0f1;
   border-color: #8dd3ff;
 }
 
@@ -89,20 +90,15 @@
 }
 
 @media (max-width: 640px) {
-
   /* SECTION */
   #contact {
-    padding-top: 2rem;   /* reduce py */
+    padding-top: 2rem; /* reduce py */
     padding-bottom: 2rem;
   }
 
   .contactMapReverse {
     display: flex;
     flex-direction: column-reverse;
-  }
-
-  .mapaGoogle {
-    margin-top: -5rem;
   }
 
   /* TÍTULO */
@@ -143,32 +139,130 @@
 
   /* MAPA */
   #contact aside div {
-    height: 20rem; /* antes 32rem */
-    width: 20rem;
+    width: 100%;
+    max-width: 100%;
+    height: 20rem;
+  }
+}
+
+@media (max-width: 640px) {
+  #contact aside div {
+    height: 22rem;
     border-radius: 1rem;
   }
 }
 
 @media (min-width: 641px) and (max-width: 1024px) {
+  #contact aside div {
+    height: 28rem;
+  }
+}
 
+@media (min-width: 641px) and (max-width: 1024px) {
   #contact p {
     width: 80%;
   }
 
-    .contactMapReverse {
+  .contactMapReverse {
     display: flex;
     flex-direction: column-reverse;
+
+    .right__title {
+      font-size: 2.2rem;
+    }
+
+    #contact aside div {
+      height: 26rem;
+    }
   }
 
-  .mapaGoogle {
-    margin-top: -5rem;
+  .iframeLoader {
+    position: absolute;
+    inset: 0;
+    background: #fff;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
   }
 
-  .right__title {
-    font-size: 2.2rem;
+  .iframeLoader img {
+    width: 80px;
+    opacity: 0.9;
   }
 
-  #contact aside div {
-    height: 26rem;
+  .loaderBar {
+    width: 180px;
+    height: 4px;
+    background: #1f1f1f;
+    overflow: hidden;
+    border-radius: 999px;
+    position: relative;
+  }
+
+  .loaderBar::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(90deg, #fff, #aaa);
+    animation: loading 1.3s infinite ease-in-out;
   }
 }
+
+  @keyframes loading {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(250%);
+    }
+  }
+
+  .iframeLoader {
+    position: absolute;
+    inset: 0;
+    background: #0a0a0a;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    color: #cfcfcf;
+    text-align: center;
+  }
+
+  .iframeLoader img {
+    width: 80px;
+    opacity: 0.9;
+  }
+
+  .loaderBar {
+    width: 200px;
+    height: 4px;
+    background: #1f1f1f;
+    overflow: hidden;
+    border-radius: 999px;
+    position: relative;
+  }
+
+  .loaderBar::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(90deg, #ffffff, #aaaaaa);
+    animation: loading 1.3s infinite ease-in-out;
+  }
+
+  @keyframes loading {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(250%);
+    }
+  }

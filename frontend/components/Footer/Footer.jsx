@@ -60,7 +60,7 @@ const Footer = () => {
             <FaInstagram className="icon" />
           </a>
           <a
-            href="href=https://api.whatsapp.com/send/?phone=5492236203529&text=Hola chicos!+Quisiera+consultar+por+una+reparación&type=phone_number&app_absent=0"
+            href="https://api.whatsapp.com/send/?phone=5492236203529&text=Hola chicos!+Quisiera+hacerles+una+consulta&type=phone_number&app_absent=0"
             className="app whatsapp"
             target="_blank"
             rel="noopener noreferrer"
@@ -78,13 +78,13 @@ const Footer = () => {
             <FaYoutube className="icon" />
           </a>
         </div>
-        <p className="text-center my-10 lg:w-6/12 ">
+        {/* <p className="text-center my-10 lg:w-6/12 ">
           <strong>© 2026 Mautica.</strong> Todos los derechos reservados.
           &quot;Mautica&quot; se refiere a la marca bajo la cual se prestan
           servicios IT, tales como Technical Support,
           según lo requiera el contexto. Los servicios son prestados por
           Mautica.
-        </p>
+        </p> */}
       </div>
     </footer>
   );

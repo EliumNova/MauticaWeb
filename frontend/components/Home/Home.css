@@ -1,3 +1,10 @@
+#home {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 8rem; /* CLAVE */
+  overflow: hidden;
+}
+
 .video__container {
   position: absolute;
   top: 0;
@@ -80,7 +87,7 @@
 }
 
 .btn__services::after {
-  content: "Conoce Más";
+  content: "Contactanos";
   position: absolute;
   inset: 0;
   display: flex;
@@ -114,4 +121,16 @@
   #home {
     padding-top:7rem; /* pt-6 */
   }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

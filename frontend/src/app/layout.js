@@ -11,9 +11,9 @@ const montserrat = Montserrat({
 
 export const metadata = {
   metadataBase: new URL("https://mautica.com.ar"),
-  title: "Mautica Tech - Servicio Técnico Apple",
+  title: "Servicio Técnico Celulares en Mar del Plata Centro | Mautica",
   description:
-    "Servicio técnico especializado en Apple. Reparación de iPhone, Mac y soluciones IT.",
+    "Reparación de celulares en Mar del Plata centro. iPhone, Samsung, Xiaomi, Motorola, PC, Mac y PS4. Presupuesto sin cargo. Atención en el día.",
   applicationName: "Mautica",
   authors: [{ name: "Mauro Deheza" }, { name: "Pablo Acosta" }],
   creator: "Mautica",
@@ -43,6 +43,19 @@ export const metadata = {
     "reparación iphone mar del plata",
     "reparación samsung mar del plata",
     "arreglo de pantalla rota",
+    "servicio técnico celulares mar del plata",
+    "reparación de celulares mar del plata",
+    "arreglo de celulares mar del plata",
+    "servicio técnico centro mar del plata",
+    "reparación iphone mar del plata",
+    "arreglo iphone mar del plata",
+    "reparación samsung mar del plata",
+    "cambio de pantalla iphone mar del plata",
+    "cambio de batería iphone mar del plata",
+    "celular no prende mar del plata",
+    "servicio técnico urgente mar del plata",
+    "reparación ps4 mar del plata",
+    "reparación de notebook mar del plata",
   ],
   formatDetection: {
     email: false,
@@ -96,6 +109,11 @@ export default function RootLayout({ children }) {
             gtag('config', 'AW-17730299811');
           `}
         </Script>
+        <link
+          rel="preload"
+          href="https://assets.calendly.com/assets/external/widget.js"
+          as="script"
+        />
       </head>
       <body className={`${montserrat.className}`}>
         <NavBar />
