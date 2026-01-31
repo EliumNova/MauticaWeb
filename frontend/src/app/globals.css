@@ -68,27 +68,3 @@ body {
 .option:hover::after {
   width: 100%;
 }
-
-.green {
-  background-color: #04bf7b;
-}
-
-.gray {
-  background-color: #ecccfe;
-}
-
-.purple {
-  background-color: #bb61f0;
-}
-
-.orange {
-  background-color: #ff964f;
-}
-
-.yellow {
-  background-color: #f7fd8f;
-}
-
-.rose {
-  background-color: #fd8f8f;
-}

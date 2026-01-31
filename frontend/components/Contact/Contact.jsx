@@ -39,11 +39,10 @@ const Contact = () => {
               aria-label="Abrir ubicación en Google Maps"
             />
             <iframe
+              title="Ubicación Mautica Tech en Google Maps"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.1311602229825!2d-57.5559836!3d-37.997401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584d99850369bb9%3A0x347f38c7a784501f!2sMautica%20Tech!5e0!3m2!1ses-419!2sar!4v1710000000000"
               className="w-full h-full border-0"
               loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              allowFullScreen
             />
           </div>
         </aside>

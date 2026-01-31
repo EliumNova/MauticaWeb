@@ -9,22 +9,26 @@ import Contact from "../../components/Contact/Contact";
 import Loader from "../../components/Loader/Loader";
 import styles from "./page.module.css";
 
-export const dynamic = "force-dynamic";
-
 export default function App() {
   const [loading, setLoading] = useState(true);
-  const [hideLoader, setHideLoader] = useState(false);
 
   useEffect(() => {
-    setHideLoader(true);
-    setTimeout(() => setLoading(false), 600);
+    // Loader solo en primera carga real
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 400);
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
     <>
-      {loading && <Loader hide={hideLoader} />}
+      {loading && <Loader />}
 
-      <main className={styles.page}>
+      <main
+        className={styles.page}
+        style={{ opacity: loading ? 0 : 1, transition: "opacity .4s ease" }}
+      >
         <Home />
         <Contact />
         <Us />

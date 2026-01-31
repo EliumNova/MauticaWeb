@@ -11,51 +11,14 @@ const montserrat = Montserrat({
 
 export const metadata = {
   metadataBase: new URL("https://mautica.com.ar"),
-  title: "Servicio Técnico Celulares en Mar del Plata Centro | Mautica",
+  title: "Mautica Tech",
   description:
-    "Reparación de celulares en Mar del Plata centro. iPhone, Samsung, Xiaomi, Motorola, PC, Mac y PS4. Presupuesto sin cargo. Atención en el día.",
+    "Servicio de celulares en Mar del Plata centro. iPhone, Samsung, Xiaomi, Motorola, PC, Mac y PS4. Presupuesto sin cargo. Atención en el día.",
   applicationName: "Mautica",
   authors: [{ name: "Mauro Deheza" }, { name: "Pablo Acosta" }],
   creator: "Mautica",
   publisher: "Mautica",
   keywords: [
-    "Servicio técnico Apple",
-    "Reparación iPhone",
-    "Reparación Mac",
-    "Soporte IT",
-    "Apple Argentina",
-    "reparación de celulares",
-    "cambiar pantalla iphone",
-    "arreglo de celulares",
-    "arreglo iphone",
-    "cambiar pantalla celular",
-    "técnico de celulares",
-    "reparación celular urgente",
-    "cambio de batería iphone",
-    "reparar celular rápido",
-    "técnico celular mar del plata",
-    "reparación de celulares mar del plata",
-    "técnico celular cerca",
-    "reparar celular hoy",
-    "reparación urgente celular",
-    "arreglo de celulares mdq",
-    "arreglo celular hoy",
-    "reparación iphone mar del plata",
-    "reparación samsung mar del plata",
-    "arreglo de pantalla rota",
-    "servicio técnico celulares mar del plata",
-    "reparación de celulares mar del plata",
-    "arreglo de celulares mar del plata",
-    "servicio técnico centro mar del plata",
-    "reparación iphone mar del plata",
-    "arreglo iphone mar del plata",
-    "reparación samsung mar del plata",
-    "cambio de pantalla iphone mar del plata",
-    "cambio de batería iphone mar del plata",
-    "celular no prende mar del plata",
-    "servicio técnico urgente mar del plata",
-    "reparación ps4 mar del plata",
-    "reparación de notebook mar del plata",
   ],
   formatDetection: {
     email: false,
@@ -66,9 +29,9 @@ export const metadata = {
     icon: "/images/favicon.ico",
   },
   openGraph: {
-    title: "Mautica Tech - Servicio Técnico Apple",
+    title: "Mautica Tech",
     description:
-      "Servicio técnico especializado en Apple. Reparación de iPhone, Mac y soluciones IT en Argentina.",
+      "Servicio y mantenimiento IT en Argentina.",
     url: "https://mautica.com.ar",
     siteName: "Mautica Tech",
     images: [
@@ -76,7 +39,7 @@ export const metadata = {
         url: "/images/og.png",
         width: 1200,
         height: 630,
-        alt: "Mautica Tech - Servicio Técnico Apple",
+        alt: "Mautica Tech",
       },
     ],
     locale: "es_AR",
@@ -84,9 +47,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mautica Tech - Servicio Técnico Apple",
+    title: "Mautica Tech",
     description:
-      "Reparación de iPhone, Mac y soluciones IT. Servicio técnico especializado.",
+      "Servicio y mantenimiento IT en Argentina.",
     images: ["/images/og.png"],
   },
 };
@@ -103,12 +66,28 @@ export default function RootLayout({ children }) {
 
         <Script id="google-ads" strategy="afterInteractive">
           {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-17730299811');
-          `}
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-17730299811');
+            `}
         </Script>
+        {/* Meta Pixel */}
+        <Script id="meta-pixel" strategy="afterInteractive">
+          {`
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2085293322324109');
+    fbq('track', 'PageView');
+  `}
+        </Script>
+
         <link
           rel="preload"
           href="https://assets.calendly.com/assets/external/widget.js"
@@ -126,7 +105,7 @@ export default function RootLayout({ children }) {
               name: "Mautica Tech",
               image: "https://mautica.com.ar/images/logo.png",
               url: "https://mautica.com.ar",
-              telephone: "+54XXXXXXXXX", // si tenés
+              telephone: "+5492236203529", // si tenés
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Mar del Plata",
@@ -135,14 +114,24 @@ export default function RootLayout({ children }) {
               },
               areaServed: "Mar del Plata",
               sameAs: [
-                "https://www.instagram.com/tuusuario",
-                "https://wa.me/54XXXXXXXXX",
+                "https://www.instagram.com/mauticatech",
+                "https://wa.me/5492236203529",
               ],
               description:
-                "Servicio técnico especializado en Apple. Reparación de iPhone, Mac y soluciones IT en Mar del Plata.",
+                "Servicio y mantenimiento IT en Argentina.",
             }),
           }}
         />
+        <noscript>
+  <img
+    height="1"
+    width="1"
+    style={{ display: "none" }}
+    src="https://www.facebook.com/tr?id=2085293322324109&ev=PageView&noscript=1"
+    alt=""
+  />
+</noscript>
+
 
         {children}
       </body>

@@ -11,12 +11,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        kairos: "#04bf7b",
-        prometeo: "#ecccfe",
-        hefesteo: "#9d05f2",
-        pegasus: "#ff964f",
-        fenix: "#f7fd8f",
-        unicornio: "#fd8f8f",
       },
     },
   },

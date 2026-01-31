@@ -1,6 +1,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://localhost:3000</loc>  <!--Cambiar cuando este hosteado-->
+    <loc>https://mautica.com.ar</loc>
     <lastmod>2024-09-11T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1</priority>

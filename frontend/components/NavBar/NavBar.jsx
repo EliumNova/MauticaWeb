@@ -14,21 +14,23 @@ export default function NavBar() {
     }
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const contact = document.getElementById("contact");
-      if (!contact) return;
+useEffect(() => {
+  const handleScroll = () => {
+    const contact = document.getElementById("contact");
+    if (!contact) return;
 
-      const contactTop = contact.offsetTop;
-      const scrollPosition = window.scrollY + window.innerHeight / 3;
+    const contactTop = contact.offsetTop;
+    const scrollPosition = window.scrollY + window.innerHeight / 3;
 
-      setIsVisible(scrollPosition >= contactTop);
-    };
+    setIsVisible(scrollPosition >= contactTop);
+  };
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // chequeo inicial
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  handleScroll();
+
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
 
   return (
     <header
