@@ -3,10 +3,10 @@ import { useEffect, useState } from "react";
 import "./Services.css";
 
 const slides = [
-  { h: "/images/slides/SLIDE1_HORIZONTAL.webp", v: "/images/slides/SLIDE1_VERTICAL.webp" },
-  { h: "/images/slides/SLIDE2_HORIZONTAL.webp", v: "/images/slides/SLIDE2_VERTICAL.webp" },
-  { h: "/images/slides/SLIDE1_HORIZONTAL.webp", v: "/images/slides/SLIDE3_VERTICAL.webp" },
-  { h: "/images/slides/SLIDE2_HORIZONTAL.webp", v: "/images/slides/SLIDE5_VERTICAL.webp" },
+  { h: "/images/slides/SLIDE1_HORIZONTAL.jpeg", v: "/images/slides/SLIDE1_VERTICAL.jpg" },
+  { h: "/images/slides/SLIDE2_HORIZONTAL.jpg", v: "/images/slides/SLIDE2_VERTICAL.jpg" },
+  { h: "/images/slides/SLIDE1_HORIZONTAL.jpeg", v: "/images/slides/SLIDE3_VERTICAL.jpg" },
+  { h: "/images/slides/SLIDE2_HORIZONTAL.jpg", v: "/images/slides/SLIDE5_VERTICAL.jpg" },
 ];
 
 export default function Services() {
