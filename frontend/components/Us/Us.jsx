@@ -18,7 +18,7 @@ const Us = () => {
       <article className="lg:w-1/2">
         <img
           src="/images/office.jpg"
-          alt="Taller de reparación Mautica en Mar del Plata"
+          alt="Oficina Mautica en Mar del Plata"
           loading="lazy"
           className="rounded-2xl shadow-2xl transition duration-500 hover:scale-105 hover:-rotate-1"
           style={{

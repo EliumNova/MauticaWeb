@@ -31,7 +31,7 @@ export const metadata = {
   openGraph: {
     title: "Mautica Tech",
     description:
-      "Servicio y mantenimiento IT en Argentina.",
+      "Calidad en cada dispositivo y calidez en cada trato.",
     url: "https://mautica.com.ar",
     siteName: "Mautica Tech",
     images: [
@@ -49,7 +49,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Mautica Tech",
     description:
-      "Servicio y mantenimiento IT en Argentina.",
+      "Calidad en cada dispositivo y calidez en cada trato.",
     images: ["/images/og.png"],
   },
 };
@@ -118,7 +118,7 @@ export default function RootLayout({ children }) {
                 "https://wa.me/5492236203529",
               ],
               description:
-                "Servicio y mantenimiento IT en Argentina.",
+                "Calidad en cada dispositivo y calidez en cada trato.",
             }),
           }}
         />

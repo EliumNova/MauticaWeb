@@ -78,13 +78,6 @@ const Footer = () => {
             <FaYoutube className="icon" />
           </a>
         </div>
-        {/* <p className="text-center my-10 lg:w-6/12 ">
-          <strong>© 2026 Mautica.</strong> Todos los derechos reservados.
-          &quot;Mautica&quot; se refiere a la marca bajo la cual se prestan
-          servicios IT, tales como Technical Support,
-          según lo requiera el contexto. Los servicios son prestados por
-          Mautica.
-        </p> */}
       </div>
     </footer>
   );
