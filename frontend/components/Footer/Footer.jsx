@@ -25,13 +25,18 @@ const Footer = () => {
           </div>
           <div className="method">
             <p className="method__title">Dirección</p>
-            <a href="https://maps.app.goo.gl/AKNfAU4iqFs9cVmD7" className="method__text address">
-              Rivadavia 3188 Piso 9, Oficina 94, B7600 Mar del Plata, <br />Provincia de Buenos Aires
+            <a
+              href="https://maps.app.goo.gl/AKNfAU4iqFs9cVmD7"
+              className="method__text address">
+              Rivadavia 3188 Piso 9, Oficina 94, B7600 Mar del Plata, <br />
+              Provincia de Buenos Aires
             </a>
           </div>
           <div className="method">
             <p className="method__title">Correo Electrónico</p>
-            <a href="mailto:maurito0dehezaok@gmail.com" className="method__text">
+            <a
+              href="mailto:maurito0dehezaok@gmail.com"
+              className="method__text">
               <strong>info@mautica.com</strong>
             </a>
           </div>
@@ -55,8 +60,7 @@ const Footer = () => {
             className="app instagram"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Instagram"
-          >
+            aria-label="Instagram">
             <FaInstagram className="icon" />
           </a>
           <a
@@ -65,16 +69,18 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Whatsapp"
-          >
+            onClick={() => {
+              window.open("/confirmado", "_blank");
+            }}>
             <FaWhatsapp className="icon" />
           </a>
+
           <a
             href="https://www.youtube.com/@Demauzzza"
             className="app youtube"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Linkedin"
-          >
+            aria-label="Linkedin">
             <FaYoutube className="icon" />
           </a>
         </div>

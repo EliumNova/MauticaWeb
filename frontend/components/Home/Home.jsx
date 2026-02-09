@@ -33,10 +33,13 @@ export default function Home() {
         />
 
         <a
-          href="https://api.whatsapp.com/send/?phone=5492236203529"
-          className="btn__services mt-12"
+          href="https://api.whatsapp.com/send?phone=5492236203529&text=Hola%20Mautica%20Tech%20quiero%20hacer%20una%20consulta"
           target="_blank"
-        >
+          rel="noopener noreferrer"
+          onClick={() => {
+            window.open("/confirmado", "_blank");
+          }}
+          className="btn__services mt-12">
           Contactanos
         </a>
 
