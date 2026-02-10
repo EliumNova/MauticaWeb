@@ -64,14 +64,9 @@ const Footer = () => {
             <FaInstagram className="icon" />
           </a>
           <a
-            href="https://api.whatsapp.com/send/?phone=5492236203529&text=Hola chicos!+Quisiera+hacerles+una+consulta&type=phone_number&app_absent=0"
+            href="/confirmado/?redirect=whatsapp"
             className="app whatsapp"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Whatsapp"
-            onClick={() => {
-              window.open("/confirmado", "_blank");
-            }}>
+            aria-label="Whatsapp">
             <FaWhatsapp className="icon" />
           </a>
 

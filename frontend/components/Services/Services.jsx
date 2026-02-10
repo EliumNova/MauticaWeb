@@ -3,15 +3,41 @@ import { useEffect, useState } from "react";
 import "./Services.css";
 
 const slides = [
-  { h: "/images/slides/SLIDE1_HORIZONTAL.jpeg", v: "/images/slides/SLIDE1_VERTICAL.jpg" },
-  { h: "/images/slides/SLIDE2_HORIZONTAL.jpg", v: "/images/slides/SLIDE2_VERTICAL.jpg" },
-  { h: "/images/slides/SLIDE1_HORIZONTAL.jpeg", v: "/images/slides/SLIDE3_VERTICAL.jpg" },
-  { h: "/images/slides/SLIDE2_HORIZONTAL.jpg", v: "/images/slides/SLIDE5_VERTICAL.jpg" },
+  {
+    h: "/images/slides/slide1_horizontal.jpeg",
+    v: "/images/slides/slide1_vertical.jpg",
+  },
+  {
+    h: "/images/slides/slide2_horizontal.jpg",
+    v: "/images/slides/slide2_vertical.jpg",
+  },
+  {
+    h: "/images/slides/slide1_horizontal.jpeg",
+    v: "/images/slides/slide3_vertical.jpg",
+  },
+  {
+    h: "/images/slides/slide2_horizontal.jpg",
+    v: "/images/slides/slide5_vertical.jpg",
+  },
 ];
 
 export default function Services() {
   const [current, setCurrent] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
+  // detectar tamaño pantalla
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  // slider
   useEffect(() => {
     const id = setInterval(() => {
       setCurrent((c) => (c + 1) % slides.length);
@@ -31,19 +57,28 @@ export default function Services() {
         <div
           key={current}
           className={`flex h-full gap-6 fade-in ${
-            invert ? "flex-row-reverse" : ""
-          }`}
-        >
-          <img
-            src={slide.h}
-            className="w-[70%] rounded-2xl object-cover"
-            alt=""
-          />
-          <img
-            src={slide.v}
-            className="w-[30%] rounded-2xl object-cover"
-            alt=""
-          />
+            invert && !isMobile ? "flex-row-reverse" : ""
+          }`}>
+          {isMobile ? (
+            <img
+              src={slide.v}
+              className="w-full h-full rounded-2xl object-cover"
+              alt=""
+            />
+          ) : (
+            <>
+              <img
+                src={slide.h}
+                className="w-[70%] rounded-2xl object-cover"
+                alt=""
+              />
+              <img
+                src={slide.v}
+                className="w-[30%] rounded-2xl object-cover"
+                alt=""
+              />
+            </>
+          )}
         </div>
       </div>
     </section>
